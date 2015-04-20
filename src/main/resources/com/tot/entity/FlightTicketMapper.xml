@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tot.entity.FlightTicketMapper" >
+  <resultMap id="BaseResultMap" type="com.tot.entity.FlightTicket" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="discr" property="discr" jdbcType="CHAR" />
+    <result column="is_auto_issue" property="isAutoIssue" jdbcType="BIT" />
+    <result column="orderer_id" property="ordererId" jdbcType="INTEGER" />
+    <result column="pnr1" property="pnr1" jdbcType="CHAR" />
+    <result column="pnr2" property="pnr2" jdbcType="CHAR" />
+    <result column="status" property="status" jdbcType="CHAR" />
+    <result column="airport_construction_fee" property="airportConstructionFee" jdbcType="INTEGER" />
+    <result column="fuel_surcharge" property="fuelSurcharge" jdbcType="INTEGER" />
+    <result column="ticket_par_price" property="ticketParPrice" jdbcType="INTEGER" />
+    <result column="ticket_par_price_discount" property="ticketParPriceDiscount" jdbcType="DECIMAL" />
+    <result column="rebate" property="rebate" jdbcType="DECIMAL" />
+    <result column="commission_charge" property="commissionCharge" jdbcType="DECIMAL" />
+    <result column="diff_ticket_par_price" property="diffTicketParPrice" jdbcType="INTEGER" />
+    <result column="total_price" property="totalPrice" jdbcType="DECIMAL" />
+    <result column="commission_charge_from_vendor" property="commissionChargeFromVendor" jdbcType="DECIMAL" />
+    <result column="rebate_from_vendor" property="rebateFromVendor" jdbcType="DECIMAL" />
+    <result column="total_cost_price" property="totalCostPrice" jdbcType="DECIMAL" />
+    <result column="belong_company_id" property="belongCompanyId" jdbcType="INTEGER" />
+    <result column="belong_tmc_id" property="belongTmcId" jdbcType="INTEGER" />
+    <result column="belong_vendor_id" property="belongVendorId" jdbcType="INTEGER" />
+    <result column="flight_segment_id" property="flightSegmentId" jdbcType="INTEGER" />
+    <result column="passenger_name" property="passengerName" jdbcType="VARCHAR" />
+    <result column="passenger_id" property="passengerId" jdbcType="INTEGER" />
+    <result column="passenger_certificate_type" property="passengerCertificateType" jdbcType="CHAR" />
+    <result column="passenger_certificate_code" property="passengerCertificateCode" jdbcType="VARCHAR" />
+    <result column="passenger_type" property="passengerType" jdbcType="CHAR" />
+    <result column="passenger_source_type" property="passengerSourceType" jdbcType="CHAR" />
+    <result column="passenger_birthday" property="passengerBirthday" jdbcType="VARCHAR" />
+    <result column="passenger_gender" property="passengerGender" jdbcType="CHAR" />
+    <result column="passenger_is_vip" property="passengerIsVip" jdbcType="BIT" />
+    <result column="passenger_need_sms_notice" property="passengerNeedSmsNotice" jdbcType="BIT" />
+    <result column="passenger_mobile" property="passengerMobile" jdbcType="VARCHAR" />
+    <result column="source_ticket_id" property="sourceTicketId" jdbcType="INTEGER" />
+    <result column="original_ticket_id" property="originalTicketId" jdbcType="INTEGER" />
+    <result column="cur_settle_log_detail_id" property="curSettleLogDetailId" jdbcType="INTEGER" />
+    <result column="belong_order_id" property="belongOrderId" jdbcType="INTEGER" />
+    <result column="change_or_refund_type" property="changeOrRefundType" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="is_i18n_ticket" property="isI18nTicket" jdbcType="TINYINT" />
+    <result column="is_multi_segment" property="isMultiSegment" jdbcType="TINYINT" />
+    <result column="total_tax" property="totalTax" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, code, type, discr, is_auto_issue, orderer_id, pnr1, pnr2, status, airport_construction_fee, 
+    fuel_surcharge, ticket_par_price, ticket_par_price_discount, rebate, commission_charge, 
+    diff_ticket_par_price, total_price, commission_charge_from_vendor, rebate_from_vendor, 
+    total_cost_price, belong_company_id, belong_tmc_id, belong_vendor_id, flight_segment_id, 
+    passenger_name, passenger_id, passenger_certificate_type, passenger_certificate_code, 
+    passenger_type, passenger_source_type, passenger_birthday, passenger_gender, passenger_is_vip, 
+    passenger_need_sms_notice, passenger_mobile, source_ticket_id, original_ticket_id, 
+    cur_settle_log_detail_id, belong_order_id, change_or_refund_type, create_time, update_time, 
+    is_i18n_ticket, is_multi_segment, total_tax
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from flight_tickets
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from flight_tickets
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tot.entity.FlightTicket" >
+    insert into flight_tickets (id, code, type, 
+      discr, is_auto_issue, orderer_id, 
+      pnr1, pnr2, status, airport_construction_fee, 
+      fuel_surcharge, ticket_par_price, ticket_par_price_discount, 
+      rebate, commission_charge, diff_ticket_par_price, 
+      total_price, commission_charge_from_vendor, 
+      rebate_from_vendor, total_cost_price, belong_company_id, 
+      belong_tmc_id, belong_vendor_id, flight_segment_id, 
+      passenger_name, passenger_id, passenger_certificate_type, 
+      passenger_certificate_code, passenger_type, passenger_source_type, 
+      passenger_birthday, passenger_gender, passenger_is_vip, 
+      passenger_need_sms_notice, passenger_mobile, source_ticket_id, 
+      original_ticket_id, cur_settle_log_detail_id, 
+      belong_order_id, change_or_refund_type, create_time, 
+      update_time, is_i18n_ticket, is_multi_segment, 
+      total_tax)
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{type,jdbcType=CHAR}, 
+      #{discr,jdbcType=CHAR}, #{isAutoIssue,jdbcType=BIT}, #{ordererId,jdbcType=INTEGER}, 
+      #{pnr1,jdbcType=CHAR}, #{pnr2,jdbcType=CHAR}, #{status,jdbcType=CHAR}, #{airportConstructionFee,jdbcType=INTEGER}, 
+      #{fuelSurcharge,jdbcType=INTEGER}, #{ticketParPrice,jdbcType=INTEGER}, #{ticketParPriceDiscount,jdbcType=DECIMAL}, 
+      #{rebate,jdbcType=DECIMAL}, #{commissionCharge,jdbcType=DECIMAL}, #{diffTicketParPrice,jdbcType=INTEGER}, 
+      #{totalPrice,jdbcType=DECIMAL}, #{commissionChargeFromVendor,jdbcType=DECIMAL}, 
+      #{rebateFromVendor,jdbcType=DECIMAL}, #{totalCostPrice,jdbcType=DECIMAL}, #{belongCompanyId,jdbcType=INTEGER}, 
+      #{belongTmcId,jdbcType=INTEGER}, #{belongVendorId,jdbcType=INTEGER}, #{flightSegmentId,jdbcType=INTEGER}, 
+      #{passengerName,jdbcType=VARCHAR}, #{passengerId,jdbcType=INTEGER}, #{passengerCertificateType,jdbcType=CHAR}, 
+      #{passengerCertificateCode,jdbcType=VARCHAR}, #{passengerType,jdbcType=CHAR}, #{passengerSourceType,jdbcType=CHAR}, 
+      #{passengerBirthday,jdbcType=VARCHAR}, #{passengerGender,jdbcType=CHAR}, #{passengerIsVip,jdbcType=BIT}, 
+      #{passengerNeedSmsNotice,jdbcType=BIT}, #{passengerMobile,jdbcType=VARCHAR}, #{sourceTicketId,jdbcType=INTEGER}, 
+      #{originalTicketId,jdbcType=INTEGER}, #{curSettleLogDetailId,jdbcType=INTEGER}, 
+      #{belongOrderId,jdbcType=INTEGER}, #{changeOrRefundType,jdbcType=CHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{isI18nTicket,jdbcType=TINYINT}, #{isMultiSegment,jdbcType=TINYINT}, 
+      #{totalTax,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tot.entity.FlightTicket" >
+    insert into flight_tickets
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="discr != null" >
+        discr,
+      </if>
+      <if test="isAutoIssue != null" >
+        is_auto_issue,
+      </if>
+      <if test="ordererId != null" >
+        orderer_id,
+      </if>
+      <if test="pnr1 != null" >
+        pnr1,
+      </if>
+      <if test="pnr2 != null" >
+        pnr2,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="airportConstructionFee != null" >
+        airport_construction_fee,
+      </if>
+      <if test="fuelSurcharge != null" >
+        fuel_surcharge,
+      </if>
+      <if test="ticketParPrice != null" >
+        ticket_par_price,
+      </if>
+      <if test="ticketParPriceDiscount != null" >
+        ticket_par_price_discount,
+      </if>
+      <if test="rebate != null" >
+        rebate,
+      </if>
+      <if test="commissionCharge != null" >
+        commission_charge,
+      </if>
+      <if test="diffTicketParPrice != null" >
+        diff_ticket_par_price,
+      </if>
+      <if test="totalPrice != null" >
+        total_price,
+      </if>
+      <if test="commissionChargeFromVendor != null" >
+        commission_charge_from_vendor,
+      </if>
+      <if test="rebateFromVendor != null" >
+        rebate_from_vendor,
+      </if>
+      <if test="totalCostPrice != null" >
+        total_cost_price,
+      </if>
+      <if test="belongCompanyId != null" >
+        belong_company_id,
+      </if>
+      <if test="belongTmcId != null" >
+        belong_tmc_id,
+      </if>
+      <if test="belongVendorId != null" >
+        belong_vendor_id,
+      </if>
+      <if test="flightSegmentId != null" >
+        flight_segment_id,
+      </if>
+      <if test="passengerName != null" >
+        passenger_name,
+      </if>
+      <if test="passengerId != null" >
+        passenger_id,
+      </if>
+      <if test="passengerCertificateType != null" >
+        passenger_certificate_type,
+      </if>
+      <if test="passengerCertificateCode != null" >
+        passenger_certificate_code,
+      </if>
+      <if test="passengerType != null" >
+        passenger_type,
+      </if>
+      <if test="passengerSourceType != null" >
+        passenger_source_type,
+      </if>
+      <if test="passengerBirthday != null" >
+        passenger_birthday,
+      </if>
+      <if test="passengerGender != null" >
+        passenger_gender,
+      </if>
+      <if test="passengerIsVip != null" >
+        passenger_is_vip,
+      </if>
+      <if test="passengerNeedSmsNotice != null" >
+        passenger_need_sms_notice,
+      </if>
+      <if test="passengerMobile != null" >
+        passenger_mobile,
+      </if>
+      <if test="sourceTicketId != null" >
+        source_ticket_id,
+      </if>
+      <if test="originalTicketId != null" >
+        original_ticket_id,
+      </if>
+      <if test="curSettleLogDetailId != null" >
+        cur_settle_log_detail_id,
+      </if>
+      <if test="belongOrderId != null" >
+        belong_order_id,
+      </if>
+      <if test="changeOrRefundType != null" >
+        change_or_refund_type,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="isI18nTicket != null" >
+        is_i18n_ticket,
+      </if>
+      <if test="isMultiSegment != null" >
+        is_multi_segment,
+      </if>
+      <if test="totalTax != null" >
+        total_tax,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=CHAR},
+      </if>
+      <if test="discr != null" >
+        #{discr,jdbcType=CHAR},
+      </if>
+      <if test="isAutoIssue != null" >
+        #{isAutoIssue,jdbcType=BIT},
+      </if>
+      <if test="ordererId != null" >
+        #{ordererId,jdbcType=INTEGER},
+      </if>
+      <if test="pnr1 != null" >
+        #{pnr1,jdbcType=CHAR},
+      </if>
+      <if test="pnr2 != null" >
+        #{pnr2,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="airportConstructionFee != null" >
+        #{airportConstructionFee,jdbcType=INTEGER},
+      </if>
+      <if test="fuelSurcharge != null" >
+        #{fuelSurcharge,jdbcType=INTEGER},
+      </if>
+      <if test="ticketParPrice != null" >
+        #{ticketParPrice,jdbcType=INTEGER},
+      </if>
+      <if test="ticketParPriceDiscount != null" >
+        #{ticketParPriceDiscount,jdbcType=DECIMAL},
+      </if>
+      <if test="rebate != null" >
+        #{rebate,jdbcType=DECIMAL},
+      </if>
+      <if test="commissionCharge != null" >
+        #{commissionCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="diffTicketParPrice != null" >
+        #{diffTicketParPrice,jdbcType=INTEGER},
+      </if>
+      <if test="totalPrice != null" >
+        #{totalPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="commissionChargeFromVendor != null" >
+        #{commissionChargeFromVendor,jdbcType=DECIMAL},
+      </if>
+      <if test="rebateFromVendor != null" >
+        #{rebateFromVendor,jdbcType=DECIMAL},
+      </if>
+      <if test="totalCostPrice != null" >
+        #{totalCostPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="belongCompanyId != null" >
+        #{belongCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="belongTmcId != null" >
+        #{belongTmcId,jdbcType=INTEGER},
+      </if>
+      <if test="belongVendorId != null" >
+        #{belongVendorId,jdbcType=INTEGER},
+      </if>
+      <if test="flightSegmentId != null" >
+        #{flightSegmentId,jdbcType=INTEGER},
+      </if>
+      <if test="passengerName != null" >
+        #{passengerName,jdbcType=VARCHAR},
+      </if>
+      <if test="passengerId != null" >
+        #{passengerId,jdbcType=INTEGER},
+      </if>
+      <if test="passengerCertificateType != null" >
+        #{passengerCertificateType,jdbcType=CHAR},
+      </if>
+      <if test="passengerCertificateCode != null" >
+        #{passengerCertificateCode,jdbcType=VARCHAR},
+      </if>
+      <if test="passengerType != null" >
+        #{passengerType,jdbcType=CHAR},
+      </if>
+      <if test="passengerSourceType != null" >
+        #{passengerSourceType,jdbcType=CHAR},
+      </if>
+      <if test="passengerBirthday != null" >
+        #{passengerBirthday,jdbcType=VARCHAR},
+      </if>
+      <if test="passengerGender != null" >
+        #{passengerGender,jdbcType=CHAR},
+      </if>
+      <if test="passengerIsVip != null" >
+        #{passengerIsVip,jdbcType=BIT},
+      </if>
+      <if test="passengerNeedSmsNotice != null" >
+        #{passengerNeedSmsNotice,jdbcType=BIT},
+      </if>
+      <if test="passengerMobile != null" >
+        #{passengerMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceTicketId != null" >
+        #{sourceTicketId,jdbcType=INTEGER},
+      </if>
+      <if test="originalTicketId != null" >
+        #{originalTicketId,jdbcType=INTEGER},
+      </if>
+      <if test="curSettleLogDetailId != null" >
+        #{curSettleLogDetailId,jdbcType=INTEGER},
+      </if>
+      <if test="belongOrderId != null" >
+        #{belongOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="changeOrRefundType != null" >
+        #{changeOrRefundType,jdbcType=CHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isI18nTicket != null" >
+        #{isI18nTicket,jdbcType=TINYINT},
+      </if>
+      <if test="isMultiSegment != null" >
+        #{isMultiSegment,jdbcType=TINYINT},
+      </if>
+      <if test="totalTax != null" >
+        #{totalTax,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tot.entity.FlightTicket" >
+    update flight_tickets
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=CHAR},
+      </if>
+      <if test="discr != null" >
+        discr = #{discr,jdbcType=CHAR},
+      </if>
+      <if test="isAutoIssue != null" >
+        is_auto_issue = #{isAutoIssue,jdbcType=BIT},
+      </if>
+      <if test="ordererId != null" >
+        orderer_id = #{ordererId,jdbcType=INTEGER},
+      </if>
+      <if test="pnr1 != null" >
+        pnr1 = #{pnr1,jdbcType=CHAR},
+      </if>
+      <if test="pnr2 != null" >
+        pnr2 = #{pnr2,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="airportConstructionFee != null" >
+        airport_construction_fee = #{airportConstructionFee,jdbcType=INTEGER},
+      </if>
+      <if test="fuelSurcharge != null" >
+        fuel_surcharge = #{fuelSurcharge,jdbcType=INTEGER},
+      </if>
+      <if test="ticketParPrice != null" >
+        ticket_par_price = #{ticketParPrice,jdbcType=INTEGER},
+      </if>
+      <if test="ticketParPriceDiscount != null" >
+        ticket_par_price_discount = #{ticketParPriceDiscount,jdbcType=DECIMAL},
+      </if>
+      <if test="rebate != null" >
+        rebate = #{rebate,jdbcType=DECIMAL},
+      </if>
+      <if test="commissionCharge != null" >
+        commission_charge = #{commissionCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="diffTicketParPrice != null" >
+        diff_ticket_par_price = #{diffTicketParPrice,jdbcType=INTEGER},
+      </if>
+      <if test="totalPrice != null" >
+        total_price = #{totalPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="commissionChargeFromVendor != null" >
+        commission_charge_from_vendor = #{commissionChargeFromVendor,jdbcType=DECIMAL},
+      </if>
+      <if test="rebateFromVendor != null" >
+        rebate_from_vendor = #{rebateFromVendor,jdbcType=DECIMAL},
+      </if>
+      <if test="totalCostPrice != null" >
+        total_cost_price = #{totalCostPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="belongCompanyId != null" >
+        belong_company_id = #{belongCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="belongTmcId != null" >
+        belong_tmc_id = #{belongTmcId,jdbcType=INTEGER},
+      </if>
+      <if test="belongVendorId != null" >
+        belong_vendor_id = #{belongVendorId,jdbcType=INTEGER},
+      </if>
+      <if test="flightSegmentId != null" >
+        flight_segment_id = #{flightSegmentId,jdbcType=INTEGER},
+      </if>
+      <if test="passengerName != null" >
+        passenger_name = #{passengerName,jdbcType=VARCHAR},
+      </if>
+      <if test="passengerId != null" >
+        passenger_id = #{passengerId,jdbcType=INTEGER},
+      </if>
+      <if test="passengerCertificateType != null" >
+        passenger_certificate_type = #{passengerCertificateType,jdbcType=CHAR},
+      </if>
+      <if test="passengerCertificateCode != null" >
+        passenger_certificate_code = #{passengerCertificateCode,jdbcType=VARCHAR},
+      </if>
+      <if test="passengerType != null" >
+        passenger_type = #{passengerType,jdbcType=CHAR},
+      </if>
+      <if test="passengerSourceType != null" >
+        passenger_source_type = #{passengerSourceType,jdbcType=CHAR},
+      </if>
+      <if test="passengerBirthday != null" >
+        passenger_birthday = #{passengerBirthday,jdbcType=VARCHAR},
+      </if>
+      <if test="passengerGender != null" >
+        passenger_gender = #{passengerGender,jdbcType=CHAR},
+      </if>
+      <if test="passengerIsVip != null" >
+        passenger_is_vip = #{passengerIsVip,jdbcType=BIT},
+      </if>
+      <if test="passengerNeedSmsNotice != null" >
+        passenger_need_sms_notice = #{passengerNeedSmsNotice,jdbcType=BIT},
+      </if>
+      <if test="passengerMobile != null" >
+        passenger_mobile = #{passengerMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceTicketId != null" >
+        source_ticket_id = #{sourceTicketId,jdbcType=INTEGER},
+      </if>
+      <if test="originalTicketId != null" >
+        original_ticket_id = #{originalTicketId,jdbcType=INTEGER},
+      </if>
+      <if test="curSettleLogDetailId != null" >
+        cur_settle_log_detail_id = #{curSettleLogDetailId,jdbcType=INTEGER},
+      </if>
+      <if test="belongOrderId != null" >
+        belong_order_id = #{belongOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="changeOrRefundType != null" >
+        change_or_refund_type = #{changeOrRefundType,jdbcType=CHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isI18nTicket != null" >
+        is_i18n_ticket = #{isI18nTicket,jdbcType=TINYINT},
+      </if>
+      <if test="isMultiSegment != null" >
+        is_multi_segment = #{isMultiSegment,jdbcType=TINYINT},
+      </if>
+      <if test="totalTax != null" >
+        total_tax = #{totalTax,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tot.entity.FlightTicket" >
+    update flight_tickets
+    set code = #{code,jdbcType=VARCHAR},
+      type = #{type,jdbcType=CHAR},
+      discr = #{discr,jdbcType=CHAR},
+      is_auto_issue = #{isAutoIssue,jdbcType=BIT},
+      orderer_id = #{ordererId,jdbcType=INTEGER},
+      pnr1 = #{pnr1,jdbcType=CHAR},
+      pnr2 = #{pnr2,jdbcType=CHAR},
+      status = #{status,jdbcType=CHAR},
+      airport_construction_fee = #{airportConstructionFee,jdbcType=INTEGER},
+      fuel_surcharge = #{fuelSurcharge,jdbcType=INTEGER},
+      ticket_par_price = #{ticketParPrice,jdbcType=INTEGER},
+      ticket_par_price_discount = #{ticketParPriceDiscount,jdbcType=DECIMAL},
+      rebate = #{rebate,jdbcType=DECIMAL},
+      commission_charge = #{commissionCharge,jdbcType=DECIMAL},
+      diff_ticket_par_price = #{diffTicketParPrice,jdbcType=INTEGER},
+      total_price = #{totalPrice,jdbcType=DECIMAL},
+      commission_charge_from_vendor = #{commissionChargeFromVendor,jdbcType=DECIMAL},
+      rebate_from_vendor = #{rebateFromVendor,jdbcType=DECIMAL},
+      total_cost_price = #{totalCostPrice,jdbcType=DECIMAL},
+      belong_company_id = #{belongCompanyId,jdbcType=INTEGER},
+      belong_tmc_id = #{belongTmcId,jdbcType=INTEGER},
+      belong_vendor_id = #{belongVendorId,jdbcType=INTEGER},
+      flight_segment_id = #{flightSegmentId,jdbcType=INTEGER},
+      passenger_name = #{passengerName,jdbcType=VARCHAR},
+      passenger_id = #{passengerId,jdbcType=INTEGER},
+      passenger_certificate_type = #{passengerCertificateType,jdbcType=CHAR},
+      passenger_certificate_code = #{passengerCertificateCode,jdbcType=VARCHAR},
+      passenger_type = #{passengerType,jdbcType=CHAR},
+      passenger_source_type = #{passengerSourceType,jdbcType=CHAR},
+      passenger_birthday = #{passengerBirthday,jdbcType=VARCHAR},
+      passenger_gender = #{passengerGender,jdbcType=CHAR},
+      passenger_is_vip = #{passengerIsVip,jdbcType=BIT},
+      passenger_need_sms_notice = #{passengerNeedSmsNotice,jdbcType=BIT},
+      passenger_mobile = #{passengerMobile,jdbcType=VARCHAR},
+      source_ticket_id = #{sourceTicketId,jdbcType=INTEGER},
+      original_ticket_id = #{originalTicketId,jdbcType=INTEGER},
+      cur_settle_log_detail_id = #{curSettleLogDetailId,jdbcType=INTEGER},
+      belong_order_id = #{belongOrderId,jdbcType=INTEGER},
+      change_or_refund_type = #{changeOrRefundType,jdbcType=CHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_i18n_ticket = #{isI18nTicket,jdbcType=TINYINT},
+      is_multi_segment = #{isMultiSegment,jdbcType=TINYINT},
+      total_tax = #{totalTax,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

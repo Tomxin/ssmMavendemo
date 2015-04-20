@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tot.entity.FlightOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.tot.entity.FlightOrder" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="discr" property="discr" jdbcType="CHAR" />
+    <result column="is_auto_issue" property="isAutoIssue" jdbcType="BIT" />
+    <result column="insurance_type_id" property="insuranceTypeId" jdbcType="INTEGER" />
+    <result column="vendor_order_id" property="vendorOrderId" jdbcType="VARCHAR" />
+    <result column="orderer_id" property="ordererId" jdbcType="INTEGER" />
+    <result column="assessor_id" property="assessorId" jdbcType="INTEGER" />
+    <result column="request_reason" property="requestReason" jdbcType="VARCHAR" />
+    <result column="reject_reason" property="rejectReason" jdbcType="VARCHAR" />
+    <result column="belong_company_id" property="belongCompanyId" jdbcType="INTEGER" />
+    <result column="belong_tmc_id" property="belongTmcId" jdbcType="INTEGER" />
+    <result column="belong_vendor_id" property="belongVendorId" jdbcType="INTEGER" />
+    <result column="pnr1" property="pnr1" jdbcType="CHAR" />
+    <result column="pnr2" property="pnr2" jdbcType="CHAR" />
+    <result column="status" property="status" jdbcType="CHAR" />
+    <result column="total_cost_price" property="totalCostPrice" jdbcType="DECIMAL" />
+    <result column="total_deal_price" property="totalDealPrice" jdbcType="DECIMAL" />
+    <result column="total_pay_price" property="totalPayPrice" jdbcType="DECIMAL" />
+    <result column="extra_mobile" property="extraMobile" jdbcType="VARCHAR" />
+    <result column="original_order_id" property="originalOrderId" jdbcType="INTEGER" />
+    <result column="source_order_id" property="sourceOrderId" jdbcType="INTEGER" />
+    <result column="client_platform_name" property="clientPlatformName" jdbcType="VARCHAR" />
+    <result column="client_app_market_name" property="clientAppMarketName" jdbcType="VARCHAR" />
+    <result column="client_app_name" property="clientAppName" jdbcType="VARCHAR" />
+    <result column="client_app_version" property="clientAppVersion" jdbcType="VARCHAR" />
+    <result column="client_ip_address" property="clientIpAddress" jdbcType="VARCHAR" />
+    <result column="is_online" property="isOnline" jdbcType="BIT" />
+    <result column="is_visible" property="isVisible" jdbcType="BIT" />
+    <result column="is_return_rebate" property="isReturnRebate" jdbcType="BIT" />
+    <result column="entry_time" property="entryTime" jdbcType="TIMESTAMP" />
+    <result column="success_time" property="successTime" jdbcType="TIMESTAMP" />
+    <result column="change_or_refund_type" property="changeOrRefundType" jdbcType="CHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="is_i18n_ticket" property="isI18nTicket" jdbcType="TINYINT" />
+    <result column="is_multi_segment" property="isMultiSegment" jdbcType="TINYINT" />
+    <result column="triple_code" property="tripleCode" jdbcType="VARCHAR" />
+    <result column="auto_issue_id" property="autoIssueId" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tot.entity.FlightOrder" extends="BaseResultMap" >
+    <result column="lower_price_flights" property="lowerPriceFlights" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, code, type, discr, is_auto_issue, insurance_type_id, vendor_order_id, orderer_id, 
+    assessor_id, request_reason, reject_reason, belong_company_id, belong_tmc_id, belong_vendor_id, 
+    pnr1, pnr2, status, total_cost_price, total_deal_price, total_pay_price, extra_mobile, 
+    original_order_id, source_order_id, client_platform_name, client_app_market_name, 
+    client_app_name, client_app_version, client_ip_address, is_online, is_visible, is_return_rebate, 
+    entry_time, success_time, change_or_refund_type, create_time, update_time, is_i18n_ticket, 
+    is_multi_segment, triple_code, auto_issue_id
+  </sql>
+  <sql id="Blob_Column_List" >
+    lower_price_flights
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from flight_orders
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from flight_orders
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tot.entity.FlightOrder" >
+    insert into flight_orders (id, code, type, 
+      discr, is_auto_issue, insurance_type_id, 
+      vendor_order_id, orderer_id, assessor_id, 
+      request_reason, reject_reason, belong_company_id, 
+      belong_tmc_id, belong_vendor_id, pnr1, 
+      pnr2, status, total_cost_price, 
+      total_deal_price, total_pay_price, extra_mobile, 
+      original_order_id, source_order_id, client_platform_name, 
+      client_app_market_name, client_app_name, client_app_version, 
+      client_ip_address, is_online, is_visible, 
+      is_return_rebate, entry_time, success_time, 
+      change_or_refund_type, create_time, update_time, 
+      is_i18n_ticket, is_multi_segment, triple_code, 
+      auto_issue_id, lower_price_flights)
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{type,jdbcType=CHAR}, 
+      #{discr,jdbcType=CHAR}, #{isAutoIssue,jdbcType=BIT}, #{insuranceTypeId,jdbcType=INTEGER}, 
+      #{vendorOrderId,jdbcType=VARCHAR}, #{ordererId,jdbcType=INTEGER}, #{assessorId,jdbcType=INTEGER}, 
+      #{requestReason,jdbcType=VARCHAR}, #{rejectReason,jdbcType=VARCHAR}, #{belongCompanyId,jdbcType=INTEGER}, 
+      #{belongTmcId,jdbcType=INTEGER}, #{belongVendorId,jdbcType=INTEGER}, #{pnr1,jdbcType=CHAR}, 
+      #{pnr2,jdbcType=CHAR}, #{status,jdbcType=CHAR}, #{totalCostPrice,jdbcType=DECIMAL}, 
+      #{totalDealPrice,jdbcType=DECIMAL}, #{totalPayPrice,jdbcType=DECIMAL}, #{extraMobile,jdbcType=VARCHAR}, 
+      #{originalOrderId,jdbcType=INTEGER}, #{sourceOrderId,jdbcType=INTEGER}, #{clientPlatformName,jdbcType=VARCHAR}, 
+      #{clientAppMarketName,jdbcType=VARCHAR}, #{clientAppName,jdbcType=VARCHAR}, #{clientAppVersion,jdbcType=VARCHAR}, 
+      #{clientIpAddress,jdbcType=VARCHAR}, #{isOnline,jdbcType=BIT}, #{isVisible,jdbcType=BIT}, 
+      #{isReturnRebate,jdbcType=BIT}, #{entryTime,jdbcType=TIMESTAMP}, #{successTime,jdbcType=TIMESTAMP}, 
+      #{changeOrRefundType,jdbcType=CHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{isI18nTicket,jdbcType=TINYINT}, #{isMultiSegment,jdbcType=TINYINT}, #{tripleCode,jdbcType=VARCHAR}, 
+      #{autoIssueId,jdbcType=VARCHAR}, #{lowerPriceFlights,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tot.entity.FlightOrder" >
+    insert into flight_orders
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="discr != null" >
+        discr,
+      </if>
+      <if test="isAutoIssue != null" >
+        is_auto_issue,
+      </if>
+      <if test="insuranceTypeId != null" >
+        insurance_type_id,
+      </if>
+      <if test="vendorOrderId != null" >
+        vendor_order_id,
+      </if>
+      <if test="ordererId != null" >
+        orderer_id,
+      </if>
+      <if test="assessorId != null" >
+        assessor_id,
+      </if>
+      <if test="requestReason != null" >
+        request_reason,
+      </if>
+      <if test="rejectReason != null" >
+        reject_reason,
+      </if>
+      <if test="belongCompanyId != null" >
+        belong_company_id,
+      </if>
+      <if test="belongTmcId != null" >
+        belong_tmc_id,
+      </if>
+      <if test="belongVendorId != null" >
+        belong_vendor_id,
+      </if>
+      <if test="pnr1 != null" >
+        pnr1,
+      </if>
+      <if test="pnr2 != null" >
+        pnr2,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="totalCostPrice != null" >
+        total_cost_price,
+      </if>
+      <if test="totalDealPrice != null" >
+        total_deal_price,
+      </if>
+      <if test="totalPayPrice != null" >
+        total_pay_price,
+      </if>
+      <if test="extraMobile != null" >
+        extra_mobile,
+      </if>
+      <if test="originalOrderId != null" >
+        original_order_id,
+      </if>
+      <if test="sourceOrderId != null" >
+        source_order_id,
+      </if>
+      <if test="clientPlatformName != null" >
+        client_platform_name,
+      </if>
+      <if test="clientAppMarketName != null" >
+        client_app_market_name,
+      </if>
+      <if test="clientAppName != null" >
+        client_app_name,
+      </if>
+      <if test="clientAppVersion != null" >
+        client_app_version,
+      </if>
+      <if test="clientIpAddress != null" >
+        client_ip_address,
+      </if>
+      <if test="isOnline != null" >
+        is_online,
+      </if>
+      <if test="isVisible != null" >
+        is_visible,
+      </if>
+      <if test="isReturnRebate != null" >
+        is_return_rebate,
+      </if>
+      <if test="entryTime != null" >
+        entry_time,
+      </if>
+      <if test="successTime != null" >
+        success_time,
+      </if>
+      <if test="changeOrRefundType != null" >
+        change_or_refund_type,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="isI18nTicket != null" >
+        is_i18n_ticket,
+      </if>
+      <if test="isMultiSegment != null" >
+        is_multi_segment,
+      </if>
+      <if test="tripleCode != null" >
+        triple_code,
+      </if>
+      <if test="autoIssueId != null" >
+        auto_issue_id,
+      </if>
+      <if test="lowerPriceFlights != null" >
+        lower_price_flights,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=CHAR},
+      </if>
+      <if test="discr != null" >
+        #{discr,jdbcType=CHAR},
+      </if>
+      <if test="isAutoIssue != null" >
+        #{isAutoIssue,jdbcType=BIT},
+      </if>
+      <if test="insuranceTypeId != null" >
+        #{insuranceTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="vendorOrderId != null" >
+        #{vendorOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="ordererId != null" >
+        #{ordererId,jdbcType=INTEGER},
+      </if>
+      <if test="assessorId != null" >
+        #{assessorId,jdbcType=INTEGER},
+      </if>
+      <if test="requestReason != null" >
+        #{requestReason,jdbcType=VARCHAR},
+      </if>
+      <if test="rejectReason != null" >
+        #{rejectReason,jdbcType=VARCHAR},
+      </if>
+      <if test="belongCompanyId != null" >
+        #{belongCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="belongTmcId != null" >
+        #{belongTmcId,jdbcType=INTEGER},
+      </if>
+      <if test="belongVendorId != null" >
+        #{belongVendorId,jdbcType=INTEGER},
+      </if>
+      <if test="pnr1 != null" >
+        #{pnr1,jdbcType=CHAR},
+      </if>
+      <if test="pnr2 != null" >
+        #{pnr2,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="totalCostPrice != null" >
+        #{totalCostPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="totalDealPrice != null" >
+        #{totalDealPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="totalPayPrice != null" >
+        #{totalPayPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="extraMobile != null" >
+        #{extraMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="originalOrderId != null" >
+        #{originalOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="sourceOrderId != null" >
+        #{sourceOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="clientPlatformName != null" >
+        #{clientPlatformName,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAppMarketName != null" >
+        #{clientAppMarketName,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAppName != null" >
+        #{clientAppName,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAppVersion != null" >
+        #{clientAppVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="clientIpAddress != null" >
+        #{clientIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="isOnline != null" >
+        #{isOnline,jdbcType=BIT},
+      </if>
+      <if test="isVisible != null" >
+        #{isVisible,jdbcType=BIT},
+      </if>
+      <if test="isReturnRebate != null" >
+        #{isReturnRebate,jdbcType=BIT},
+      </if>
+      <if test="entryTime != null" >
+        #{entryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="successTime != null" >
+        #{successTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="changeOrRefundType != null" >
+        #{changeOrRefundType,jdbcType=CHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isI18nTicket != null" >
+        #{isI18nTicket,jdbcType=TINYINT},
+      </if>
+      <if test="isMultiSegment != null" >
+        #{isMultiSegment,jdbcType=TINYINT},
+      </if>
+      <if test="tripleCode != null" >
+        #{tripleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="autoIssueId != null" >
+        #{autoIssueId,jdbcType=VARCHAR},
+      </if>
+      <if test="lowerPriceFlights != null" >
+        #{lowerPriceFlights,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tot.entity.FlightOrder" >
+    update flight_orders
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=CHAR},
+      </if>
+      <if test="discr != null" >
+        discr = #{discr,jdbcType=CHAR},
+      </if>
+      <if test="isAutoIssue != null" >
+        is_auto_issue = #{isAutoIssue,jdbcType=BIT},
+      </if>
+      <if test="insuranceTypeId != null" >
+        insurance_type_id = #{insuranceTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="vendorOrderId != null" >
+        vendor_order_id = #{vendorOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="ordererId != null" >
+        orderer_id = #{ordererId,jdbcType=INTEGER},
+      </if>
+      <if test="assessorId != null" >
+        assessor_id = #{assessorId,jdbcType=INTEGER},
+      </if>
+      <if test="requestReason != null" >
+        request_reason = #{requestReason,jdbcType=VARCHAR},
+      </if>
+      <if test="rejectReason != null" >
+        reject_reason = #{rejectReason,jdbcType=VARCHAR},
+      </if>
+      <if test="belongCompanyId != null" >
+        belong_company_id = #{belongCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="belongTmcId != null" >
+        belong_tmc_id = #{belongTmcId,jdbcType=INTEGER},
+      </if>
+      <if test="belongVendorId != null" >
+        belong_vendor_id = #{belongVendorId,jdbcType=INTEGER},
+      </if>
+      <if test="pnr1 != null" >
+        pnr1 = #{pnr1,jdbcType=CHAR},
+      </if>
+      <if test="pnr2 != null" >
+        pnr2 = #{pnr2,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="totalCostPrice != null" >
+        total_cost_price = #{totalCostPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="totalDealPrice != null" >
+        total_deal_price = #{totalDealPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="totalPayPrice != null" >
+        total_pay_price = #{totalPayPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="extraMobile != null" >
+        extra_mobile = #{extraMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="originalOrderId != null" >
+        original_order_id = #{originalOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="sourceOrderId != null" >
+        source_order_id = #{sourceOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="clientPlatformName != null" >
+        client_platform_name = #{clientPlatformName,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAppMarketName != null" >
+        client_app_market_name = #{clientAppMarketName,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAppName != null" >
+        client_app_name = #{clientAppName,jdbcType=VARCHAR},
+      </if>
+      <if test="clientAppVersion != null" >
+        client_app_version = #{clientAppVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="clientIpAddress != null" >
+        client_ip_address = #{clientIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="isOnline != null" >
+        is_online = #{isOnline,jdbcType=BIT},
+      </if>
+      <if test="isVisible != null" >
+        is_visible = #{isVisible,jdbcType=BIT},
+      </if>
+      <if test="isReturnRebate != null" >
+        is_return_rebate = #{isReturnRebate,jdbcType=BIT},
+      </if>
+      <if test="entryTime != null" >
+        entry_time = #{entryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="successTime != null" >
+        success_time = #{successTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="changeOrRefundType != null" >
+        change_or_refund_type = #{changeOrRefundType,jdbcType=CHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isI18nTicket != null" >
+        is_i18n_ticket = #{isI18nTicket,jdbcType=TINYINT},
+      </if>
+      <if test="isMultiSegment != null" >
+        is_multi_segment = #{isMultiSegment,jdbcType=TINYINT},
+      </if>
+      <if test="tripleCode != null" >
+        triple_code = #{tripleCode,jdbcType=VARCHAR},
+      </if>
+      <if test="autoIssueId != null" >
+        auto_issue_id = #{autoIssueId,jdbcType=VARCHAR},
+      </if>
+      <if test="lowerPriceFlights != null" >
+        lower_price_flights = #{lowerPriceFlights,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tot.entity.FlightOrder" >
+    update flight_orders
+    set code = #{code,jdbcType=VARCHAR},
+      type = #{type,jdbcType=CHAR},
+      discr = #{discr,jdbcType=CHAR},
+      is_auto_issue = #{isAutoIssue,jdbcType=BIT},
+      insurance_type_id = #{insuranceTypeId,jdbcType=INTEGER},
+      vendor_order_id = #{vendorOrderId,jdbcType=VARCHAR},
+      orderer_id = #{ordererId,jdbcType=INTEGER},
+      assessor_id = #{assessorId,jdbcType=INTEGER},
+      request_reason = #{requestReason,jdbcType=VARCHAR},
+      reject_reason = #{rejectReason,jdbcType=VARCHAR},
+      belong_company_id = #{belongCompanyId,jdbcType=INTEGER},
+      belong_tmc_id = #{belongTmcId,jdbcType=INTEGER},
+      belong_vendor_id = #{belongVendorId,jdbcType=INTEGER},
+      pnr1 = #{pnr1,jdbcType=CHAR},
+      pnr2 = #{pnr2,jdbcType=CHAR},
+      status = #{status,jdbcType=CHAR},
+      total_cost_price = #{totalCostPrice,jdbcType=DECIMAL},
+      total_deal_price = #{totalDealPrice,jdbcType=DECIMAL},
+      total_pay_price = #{totalPayPrice,jdbcType=DECIMAL},
+      extra_mobile = #{extraMobile,jdbcType=VARCHAR},
+      original_order_id = #{originalOrderId,jdbcType=INTEGER},
+      source_order_id = #{sourceOrderId,jdbcType=INTEGER},
+      client_platform_name = #{clientPlatformName,jdbcType=VARCHAR},
+      client_app_market_name = #{clientAppMarketName,jdbcType=VARCHAR},
+      client_app_name = #{clientAppName,jdbcType=VARCHAR},
+      client_app_version = #{clientAppVersion,jdbcType=VARCHAR},
+      client_ip_address = #{clientIpAddress,jdbcType=VARCHAR},
+      is_online = #{isOnline,jdbcType=BIT},
+      is_visible = #{isVisible,jdbcType=BIT},
+      is_return_rebate = #{isReturnRebate,jdbcType=BIT},
+      entry_time = #{entryTime,jdbcType=TIMESTAMP},
+      success_time = #{successTime,jdbcType=TIMESTAMP},
+      change_or_refund_type = #{changeOrRefundType,jdbcType=CHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_i18n_ticket = #{isI18nTicket,jdbcType=TINYINT},
+      is_multi_segment = #{isMultiSegment,jdbcType=TINYINT},
+      triple_code = #{tripleCode,jdbcType=VARCHAR},
+      auto_issue_id = #{autoIssueId,jdbcType=VARCHAR},
+      lower_price_flights = #{lowerPriceFlights,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tot.entity.FlightOrder" >
+    update flight_orders
+    set code = #{code,jdbcType=VARCHAR},
+      type = #{type,jdbcType=CHAR},
+      discr = #{discr,jdbcType=CHAR},
+      is_auto_issue = #{isAutoIssue,jdbcType=BIT},
+      insurance_type_id = #{insuranceTypeId,jdbcType=INTEGER},
+      vendor_order_id = #{vendorOrderId,jdbcType=VARCHAR},
+      orderer_id = #{ordererId,jdbcType=INTEGER},
+      assessor_id = #{assessorId,jdbcType=INTEGER},
+      request_reason = #{requestReason,jdbcType=VARCHAR},
+      reject_reason = #{rejectReason,jdbcType=VARCHAR},
+      belong_company_id = #{belongCompanyId,jdbcType=INTEGER},
+      belong_tmc_id = #{belongTmcId,jdbcType=INTEGER},
+      belong_vendor_id = #{belongVendorId,jdbcType=INTEGER},
+      pnr1 = #{pnr1,jdbcType=CHAR},
+      pnr2 = #{pnr2,jdbcType=CHAR},
+      status = #{status,jdbcType=CHAR},
+      total_cost_price = #{totalCostPrice,jdbcType=DECIMAL},
+      total_deal_price = #{totalDealPrice,jdbcType=DECIMAL},
+      total_pay_price = #{totalPayPrice,jdbcType=DECIMAL},
+      extra_mobile = #{extraMobile,jdbcType=VARCHAR},
+      original_order_id = #{originalOrderId,jdbcType=INTEGER},
+      source_order_id = #{sourceOrderId,jdbcType=INTEGER},
+      client_platform_name = #{clientPlatformName,jdbcType=VARCHAR},
+      client_app_market_name = #{clientAppMarketName,jdbcType=VARCHAR},
+      client_app_name = #{clientAppName,jdbcType=VARCHAR},
+      client_app_version = #{clientAppVersion,jdbcType=VARCHAR},
+      client_ip_address = #{clientIpAddress,jdbcType=VARCHAR},
+      is_online = #{isOnline,jdbcType=BIT},
+      is_visible = #{isVisible,jdbcType=BIT},
+      is_return_rebate = #{isReturnRebate,jdbcType=BIT},
+      entry_time = #{entryTime,jdbcType=TIMESTAMP},
+      success_time = #{successTime,jdbcType=TIMESTAMP},
+      change_or_refund_type = #{changeOrRefundType,jdbcType=CHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_i18n_ticket = #{isI18nTicket,jdbcType=TINYINT},
+      is_multi_segment = #{isMultiSegment,jdbcType=TINYINT},
+      triple_code = #{tripleCode,jdbcType=VARCHAR},
+      auto_issue_id = #{autoIssueId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
