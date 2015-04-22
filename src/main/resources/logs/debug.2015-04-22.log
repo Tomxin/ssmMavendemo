@@ -1,0 +1,196 @@
+2015-04-22 12:15:58,395 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 12:15:58,433 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 12:15:58,710 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\FlightOrderMapper.xml]'
+2015-04-22 12:15:58,794 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\FlightTicketMapper.xml]'
+2015-04-22 12:15:58,803 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 12:16:31,121 [http-bio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 12:16:31,126 [http-bio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19bd43] was not registered for synchronization because synchronization is not active
+2015-04-22 12:16:31,138 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - ... log4jdbc initializing ...
+2015-04-22 12:16:31,138 [http-bio-8080-exec-8] DEBUG log4jdbc.debug -   log4jdbc.properties not found on classpath
+2015-04-22 12:16:31,138 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.debug.stack.prefix is not defined
+2015-04-22 12:16:31,138 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.sqltiming.warn.threshold is not defined
+2015-04-22 12:16:31,138 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.sqltiming.error.threshold is not defined
+2015-04-22 12:16:31,138 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2015-04-22 12:16:31,139 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2015-04-22 12:16:31,139 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2015-04-22 12:16:31,139 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.statement.warn is not defined (using default value false)
+2015-04-22 12:16:31,139 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.select is not defined (using default value true)
+2015-04-22 12:16:31,139 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2015-04-22 12:16:31,139 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.update is not defined (using default value true)
+2015-04-22 12:16:31,140 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2015-04-22 12:16:31,140 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.create is not defined (using default value true)
+2015-04-22 12:16:31,140 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2015-04-22 12:16:31,140 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2015-04-22 12:16:31,140 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.trim.sql is not defined (using default value true)
+2015-04-22 12:16:31,140 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2015-04-22 12:16:31,141 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2015-04-22 12:16:31,141 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.drivers is not defined
+2015-04-22 12:16:31,145 [http-bio-8080-exec-8] DEBUG log4jdbc.debug -   FOUND DRIVER com.mysql.jdbc.Driver
+2015-04-22 12:16:31,149 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - ... log4jdbc initialized! ...
+2015-04-22 12:16:32,299 [http-bio-8080-exec-8] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 12:16:32,654 [http-bio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19bd43]
+2015-04-22 12:18:29,077 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 12:18:29,104 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 12:18:29,265 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\FlightOrderMapper.xml]'
+2015-04-22 12:18:29,301 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\FlightTicketMapper.xml]'
+2015-04-22 12:18:29,317 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 12:18:37,480 [http-bio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 12:18:37,485 [http-bio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ded2b6] was not registered for synchronization because synchronization is not active
+2015-04-22 12:18:37,504 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - ... log4jdbc initializing ...
+2015-04-22 12:18:37,504 [http-bio-8080-exec-2] DEBUG log4jdbc.debug -   log4jdbc.properties not found on classpath
+2015-04-22 12:18:37,504 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.debug.stack.prefix is not defined
+2015-04-22 12:18:37,504 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.sqltiming.warn.threshold is not defined
+2015-04-22 12:18:37,504 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.sqltiming.error.threshold is not defined
+2015-04-22 12:18:37,505 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2015-04-22 12:18:37,505 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.maxlinelength is not defined (using default of 90)
+2015-04-22 12:18:37,505 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.fulldebugstacktrace is not defined (using default value false)
+2015-04-22 12:18:37,505 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.statement.warn is not defined (using default value false)
+2015-04-22 12:18:37,505 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.select is not defined (using default value true)
+2015-04-22 12:18:37,505 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.insert is not defined (using default value true)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.update is not defined (using default value true)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.delete is not defined (using default value true)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.create is not defined (using default value true)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.sql.addsemicolon is not defined (using default value false)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.auto.load.popular.drivers is not defined (using default value true)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.trim.sql is not defined (using default value true)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.trim.sql.extrablanklines is not defined (using default value true)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.suppress.generated.keys.exception is not defined (using default value false)
+2015-04-22 12:18:37,506 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.drivers is not defined
+2015-04-22 12:18:37,510 [http-bio-8080-exec-2] DEBUG log4jdbc.debug -   FOUND DRIVER com.mysql.jdbc.Driver
+2015-04-22 12:18:37,513 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - ... log4jdbc initialized! ...
+2015-04-22 12:18:37,714 [http-bio-8080-exec-2] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 12:18:37,731 [http-bio-8080-exec-2] DEBUG jdbc.sqltiming -  org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+2. SELECT * FROM person where id = 1 
+ {executed in 1 msec}
+2015-04-22 12:18:37,746 [http-bio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ded2b6]
+2015-04-22 13:45:38,087 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 13:45:38,142 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:45:38,425 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\FlightOrderMapper.xml]'
+2015-04-22 13:45:38,507 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\FlightTicketMapper.xml]'
+2015-04-22 13:45:38,517 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 13:52:22,414 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 13:52:22,445 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:52:22,540 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:52:22,566 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:52:22,585 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:52:22,601 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:56:47,840 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 13:56:47,880 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:56:48,004 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:56:48,037 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:56:48,064 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:56:48,085 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:59:28,377 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 13:59:28,406 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:59:28,500 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:59:28,526 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:59:28,545 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 13:59:28,562 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:00:50,255 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:00:50,282 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:00:50,393 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:00:50,423 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:00:50,427 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9] was not registered for synchronization because synchronization is not active
+2015-04-22 14:00:50,657 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:00:50,692 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9]
+2015-04-22 14:10:09,769 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:10:09,795 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:10:09,899 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:10:09,929 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:10:09,933 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1020918] was not registered for synchronization because synchronization is not active
+2015-04-22 14:10:10,146 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:10:10,167 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1020918]
+2015-04-22 14:10:40,252 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:10:40,280 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:10:40,376 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:10:40,406 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:10:40,410 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f6a1] was not registered for synchronization because synchronization is not active
+2015-04-22 14:10:40,638 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:10:40,659 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26f6a1]
+2015-04-22 14:11:52,767 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:11:52,792 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:11:52,883 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:11:52,913 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:11:52,917 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@947e93] was not registered for synchronization because synchronization is not active
+2015-04-22 14:11:53,127 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:11:53,148 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@947e93]
+2015-04-22 14:12:01,840 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:12:01,866 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:12:01,958 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:12:01,989 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:12:01,993 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9] was not registered for synchronization because synchronization is not active
+2015-04-22 14:12:02,216 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:12:02,237 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9]
+2015-04-22 14:13:12,263 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:13:12,289 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:13:12,381 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:13:12,411 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:13:12,415 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9] was not registered for synchronization because synchronization is not active
+2015-04-22 14:13:12,638 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:13:12,661 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9]
+2015-04-22 14:19:23,655 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:19:23,683 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:19:23,782 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:19:23,823 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:19:23,828 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9] was not registered for synchronization because synchronization is not active
+2015-04-22 14:19:24,044 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:19:24,066 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9]
+2015-04-22 14:21:13,781 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:21:13,806 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:21:13,896 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:21:13,927 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:21:13,931 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1020918] was not registered for synchronization because synchronization is not active
+2015-04-22 14:21:14,141 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:21:14,162 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1020918]
+2015-04-22 14:21:38,711 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:21:38,738 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:21:38,832 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:21:38,863 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:21:38,867 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99c628] was not registered for synchronization because synchronization is not active
+2015-04-22 14:21:39,092 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:21:39,113 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99c628]
+2015-04-22 14:22:22,373 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:22:22,413 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:22:22,542 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:22:22,577 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:22:22,582 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@101af85] was not registered for synchronization because synchronization is not active
+2015-04-22 14:22:22,825 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:22:22,846 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@101af85]
+2015-04-22 14:22:57,711 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:22:57,739 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:22:57,835 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:22:57,871 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:22:57,876 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@197fb84] was not registered for synchronization because synchronization is not active
+2015-04-22 14:22:58,100 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:22:58,121 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@197fb84]
+2015-04-22 14:23:22,704 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:23:22,730 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:23:22,823 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:23:22,854 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:23:22,857 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99c628] was not registered for synchronization because synchronization is not active
+2015-04-22 14:23:23,101 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:23:23,122 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99c628]
+2015-04-22 14:24:15,549 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:24:15,574 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:24:15,673 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:24:15,704 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:24:15,708 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b525] was not registered for synchronization because synchronization is not active
+2015-04-22 14:24:15,917 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:24:15,938 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b525]
+2015-04-22 14:24:31,529 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:24:31,555 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:24:31,647 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:24:31,678 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:24:31,682 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99c628] was not registered for synchronization because synchronization is not active
+2015-04-22 14:24:31,902 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:24:31,923 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99c628]
+2015-04-22 14:24:53,234 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:24:53,260 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:24:53,359 [main] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\target\classes\com\tot\entity\PersonDao.xml]'
+2015-04-22 14:24:53,389 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2015-04-22 14:24:53,393 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9] was not registered for synchronization because synchronization is not active
+2015-04-22 14:24:53,616 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [jdbc:mysql://localhost:3306/tmcs_prod, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2015-04-22 14:24:53,637 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a326f9]
+2015-04-22 14:31:59,142 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-04-22 14:31:59,164 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'configLocation' not specified, using default MyBatis Configuration
+2015-04-22 14:31:59,272 [RMI TCP Connection(3)-127.0.0.1] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [G:\maven_test\mavenDemo01\out\artifacts\mavenDemo01\WEB-INF\classes\com\tot\entity\PersonDao.xml]'

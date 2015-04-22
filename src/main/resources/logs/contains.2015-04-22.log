@@ -1,0 +1,2 @@
+2015-04-22 12:16:31,138 [http-bio-8080-exec-8] DEBUG log4jdbc.debug - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)
+2015-04-22 12:18:37,505 [http-bio-8080-exec-2] DEBUG log4jdbc.debug - x log4jdbc.dump.booleanastruefalse is not defined (using default value false)

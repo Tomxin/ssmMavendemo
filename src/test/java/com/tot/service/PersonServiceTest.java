@@ -19,6 +19,7 @@ public class PersonServiceTest  extends AbstractTestNGSpringContextTests{
     @Test
     public void test() throws Exception {
         Person p = personService.findPersonById(1);
+        System.out.printf("heihei%s","nimei");
         Assert.assertEquals(p.getName(),"totxx");
 
     }
